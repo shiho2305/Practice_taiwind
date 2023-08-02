@@ -1,6 +1,7 @@
 import React from 'react';
 import {MdChevronLeft, MdChevronRight} from 'react-icons/md';
 import {dataRestaurant} from '../data/dataRestaurant';
+import {dataDescription} from '../data/dataDesription';
 
 const ContactUs = () => {
 
@@ -20,33 +21,17 @@ const ContactUs = () => {
             <h1 className='text-orange-600 font-bold text-4xl text-center mb-8 drop-shadow-xl'>Top Rates Restaurant</h1>
         
             <div className='grid grid-cols-3 lg:grid-cols-3 gap-9 ml-6 mr-6'>
-                <div className='mt-7'>
-                    <div className='bg-gray-200 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl hover:scale-105 duration-300'>
-                        <img className='w-full h-[300px] object-cover' src="https://images.pexels.com/photos/1322184/pexels-photo-1322184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image error" />
-                        <div className='mt-5 mb-6'>
-                            <h2 className='font-bold text-2xl text-slate-600'>Brett Sayles</h2>
-                            <p className='text-slate-500 mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum perferendis quos aliquam repellendus, officia et corporis, eum, minus deleniti aut saepe. Provident beatae alias dolorem maiores dolorum reprehenderit ipsam amet?</p>
-                        </div>                     
-                    </div>
-                </div>
-                <div className='mt-7'>
-                    <div className='bg-gray-200 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl hover:scale-105 duration-300'>
-                        <img className='w-full h-[300px] object-cover' src="https://images.pexels.com/photos/10725815/pexels-photo-10725815.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image error" />
-                        <div className='mt-5 mb-6'>
-                            <h2 className='font-bold text-2xl text-slate-600'>Mathias Reading</h2>
-                            <p className='text-slate-500 mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum perferendis quos aliquam repellendus, officia et corporis, eum, minus deleniti aut saepe. Provident beatae alias dolorem maiores dolorum reprehenderit ipsam amet?</p>
+                {dataDescription.map((items) => (
+                    <div key={items.id} className='mt-7'>
+                        <div className='bg-gray-200 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl hover:scale-105 duration-300'>
+                            <img className='w-full h-[300px] object-cover' src={items.img} alt={items.name} />
+                            <div className='mt-5 mb-6'>
+                                <h2 className='font-bold text-2xl text-slate-600'>{items.name}</h2>
+                                <p className='text-slate-500 mt-3 h-36 overflow-hidden line-clamp-4'>{items.description}</p>
+                            </div>                     
                         </div>
                     </div>
-                </div>
-                <div className='mt-7'>
-                    <div className='bg-gray-200 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl hover:scale-105 duration-300'>
-                        <img className='w-full h-[300px] object-cover' src="https://images.pexels.com/photos/1322184/pexels-photo-1322184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image error" />
-                        <div className='mt-5 mb-6'>
-                            <h2 className='font-bold text-2xl text-slate-600'>Brett Sayles</h2>
-                            <p className='text-slate-500 mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum perferendis quos aliquam repellendus, officia et corporis, eum, minus deleniti aut saepe. Provident beatae alias dolorem maiores dolorum reprehenderit ipsam amet?</p>
-                        </div>
-                    </div>
-                </div>
+                ))}s
             </div>
 
 
@@ -92,6 +77,10 @@ const ContactUs = () => {
                     </div>
                     <MdChevronRight className='cursor-pointer text-slate-100' onClick={slideRight} size={80}/>
                 </div>
+
+            </div>
+
+            <div>
 
             </div>
 
