@@ -31,7 +31,7 @@ const ContactUs = () => {
                             </div>                     
                         </div>
                     </div>
-                ))}s
+                ))}
             </div>
 
 
