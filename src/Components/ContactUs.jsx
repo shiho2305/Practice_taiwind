@@ -102,13 +102,7 @@ const ContactUs = () => {
                     <MdChevronRight className='cursor-pointer text-slate-100' onClick={slideRight} size={80}/>
                 </div>
 
-            </div>
-
-           <footer>
-                      
-           </footer>
-            
-
+            </div>            
         </div>
     );
 }

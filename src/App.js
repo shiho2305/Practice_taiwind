@@ -6,6 +6,7 @@ import Food from './Components/Food';
 import Category from './Components/Category';
 import Footer from './Components/Footer';
 import ContactUs from './Components/ContactUs';
+import FooterWeb from './Components/Footer_web';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Category/>
         <Footer/>
         <ContactUs/>
+        <FooterWeb/>
     </div>
   );
 }
